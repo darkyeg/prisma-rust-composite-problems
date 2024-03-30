@@ -9,8 +9,8 @@ generator client {
 }
 
 model Product {
-  id   String   @id @default(cuid()) @map("_id")
-  name Language
+  id   String    @id @default(cuid()) @map("_id")
+  name Language?
 }
 
 type Language {
