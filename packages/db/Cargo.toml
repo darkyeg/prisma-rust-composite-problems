@@ -1,0 +1,10 @@
+[package]
+name = "db"
+version = "0.1.0"
+edition = "2021"
+
+
+[dependencies]
+prisma-client-rust.workspace = true
+
+once_cell = "1.19.0"

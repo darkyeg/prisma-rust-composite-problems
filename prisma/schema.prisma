@@ -1,0 +1,19 @@
+datasource db {
+  provider = "mongodb"
+  url      = env("DATABASE_URL")
+}
+
+generator client {
+  provider = "cargo prisma"
+  output   = "../packages/db/src/prisma.rs"
+}
+
+model Product {
+  id   String   @id @default(cuid()) @map("_id")
+  name Language
+}
+
+type Language {
+  ar String
+  en String
+}

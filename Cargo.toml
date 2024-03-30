@@ -1,0 +1,28 @@
+[workspace]
+resolver = "2"
+members = ["packages/prisma-cli", "packages/db"]
+
+[package]
+name = "rest"
+version = "0.1.0"
+edition = "2021"
+
+
+[profile.release]
+lto = true
+
+[workspace.dependencies]
+db = { path = "packages/db" }
+prisma-client-rust = { git = "https://github.com/Brendonovich/prisma-client-rust", tag = "0.6.11", features = [
+  "mongodb",
+], default-features = false }
+prisma-client-rust-cli = { git = "https://github.com/Brendonovich/prisma-client-rust", tag = "0.6.11", features = [
+  "mongodb",
+], default-features = false }
+
+
+[dependencies]
+db.workspace = true
+prisma-client-rust.workspace = true
+tokio = { version = "1", features = ["macros", "rt-multi-thread"] }
+dotenv = "0.15.0"
