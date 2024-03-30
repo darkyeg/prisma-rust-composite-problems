@@ -4,7 +4,7 @@ use db::LazyClient;
 static client: LazyClient = LazyClient::new();
 
 #[tokio::main]
-fn main() {
+async fn main() {
   dotenv::dotenv().ok();
 
   client
