@@ -11,6 +11,8 @@ generator client {
 model Product {
   id   String   @id @default(cuid()) @map("_id")
   name Language
+
+  @@unique([name.ar, name.en])
 }
 
 type Language {
