@@ -26,6 +26,6 @@ async fn main() {
 
   println!("{:#?}", result);
 
-  // 2 - Missing equal/is/is_not(Null) in generated code
+  // 2 - Missing (equal/is/is_not)(None) in generated code
   // it is so important when use nullable fields
 }
