@@ -5,6 +5,7 @@ use std::ops::Deref;
 
 use once_cell::sync::OnceCell;
 pub use prisma::*;
+pub mod selection;
 
 pub struct LazyClient {
   client: OnceCell<PrismaClient>,
