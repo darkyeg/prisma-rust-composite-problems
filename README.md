@@ -8,4 +8,4 @@ When attempting to match products with a defined name, the code encounters a par
 
 #### Error 2:
 
-The generated code lacks proper handling for equality checks (`equal(Null)`, `is(Null)`, `is_not(Null)`) for nullable fields. This omission is crucial, especially when dealing with nullable fields like `name`.
+The generated code lacks proper handling for equality checks (`equal(None)`, `is(None)`, `is_not(None)`) for nullable fields. This omission is crucial, especially when dealing with nullable fields like `name`.
